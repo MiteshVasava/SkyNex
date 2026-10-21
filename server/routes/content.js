@@ -1,0 +1,2 @@
+import {Router} from 'express';import SiteContent from '../models/SiteContent.js';import {auth,permission} from '../middleware/auth.js';const r=Router();
+r.get('/',async(_,res)=>{const rows=await SiteContent.find();res.json(Object.fromEntries(rows.map(x=>[x.key,x.value])))});r.put('/:key',auth,permission('manageSite'),async(req,res)=>{const x=await SiteContent.findOneAndUpdate({key:req.params.key},{key:req.params.key,value:req.body},{upsert:true,new:true});res.json(x.value)});export default r;

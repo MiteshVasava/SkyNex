@@ -1,0 +1,1 @@
+{"name":"skynex-server","version":"1.0.0","type":"module","scripts":{"dev":"nodemon src.js","start":"node src.js","seed":"node seed/seed.js"},"dependencies":{"bcryptjs":"latest","cors":"latest","dotenv":"latest","express":"latest","jsonwebtoken":"latest","mongoose":"latest","multer":"latest","morgan":"latest"},"devDependencies":{"nodemon":"latest"}}

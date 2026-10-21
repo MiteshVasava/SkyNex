@@ -1,0 +1,2 @@
+name,brand,category,price,oldPrice,discount,stock,images,description,featured
+Example Laptop,ExampleBrand,Laptops,59999,64999,8,10,https://example.com/laptop-front.jpg|https://example.com/laptop-side.jpg,Example product description,true
