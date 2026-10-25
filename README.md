@@ -1,39 +1,105 @@
 # SkyNex — The Tech Hub
 
-MERN electronics e-commerce platform. The customer storefront and the private administration portal run in the **same React/Vite application on port 5173**. The Express/MongoDB API remains on port 5000.
+**SkyNex** is a modern electronics e-commerce platform designed to provide a smooth and convenient online shopping experience. It offers a responsive storefront where customers can explore electronics, discover products, manage their shopping carts, and place orders.
 
-## Standard local setup
-1. Start MongoDB.
-2. Backend: `cd server`, `npm install`, copy `.env.example` to `.env`, set `MONGO_URI` and replace the example `JWT_SECRET` with a random value of at least 32 characters, then run `npm run seed` and `npm run dev`.
-3. Storefront: `cd client`, `npm install`, copy `.env.example` to `.env`, then run `npm run dev`.
-4. Open the public storefront at `http://localhost:5173`.
+Built with the MERN stack, SkyNex combines modern web technologies with a clean, responsive user interface.
 
-## Owner / developer only — private administration route
-**Do not add this route to public navigation, public footer, or customer-facing documentation.**
-- Administration login: `http://localhost:5173/skynex-control/login`
-- Administration workspace: `http://localhost:5173/skynex-control`
-- API: `http://localhost:5000/api`
+## Overview
 
-The URL is not the security boundary. Server-side authentication, roles and permission middleware protect private APIs. Customer and administration sessions use separate token keys. Tokens expire after 8 hours; expired/invalid sessions are cleared and redirected to the appropriate login page.
+SkyNex brings customers and store management together in one platform, offering an organized shopping experience and efficient product and order management.
 
-## Account types
-- `customer`: shopping, orders and account features.
-- `admin`: full administration access.
-- `staff`: only the permission areas assigned by an administrator.
+## Key Features
 
-## Administration capabilities
-- Product/category/order/customer management.
-- Staff account creation and permission assignment.
-- Site customization: theme presets, color palette, font family and sizes, hero content/image, promotional offers, and store contact details.
-- Dashboard layout options and business analytics with order-status histogram and order-mix chart.
-- Bulk product import via CSV. Each imported product requires a name, valid price, and at least one image URL/path.
+### Customer Experience
+- Modern and responsive homepage.
+- Browse electronics by category.
+- Search and explore products.
+- Detailed product pages.
+- Shopping cart management.
+- Customer registration and login.
+- Order placement and order history.
+- Personalized customer account.
 
-## Security and deployment notes
-- Do not commit `.env` files or use seed credentials in production.
-- The development seed creates `admin@skynex.local` with password `Admin@123`. Run `npm run seed` once on your configured development database if no admin account exists. The seed creates `admin@skynex.local` / `Admin@123` only when that account is absent and preserves existing admin/staff accounts. Change the development password before deployment.
-- Restrict image uploads by file type/size and configure a production image storage provider for deployment.
-- Test role and permission enforcement for every protected API before going live.
-- This development build has not been security-audited or fully end-to-end tested.
+### Product Management
+- Add, edit, and manage products.
+- Product category management.
+- Product image management.
+- Inventory management.
+- Bulk product import.
 
-## UI refresh
-The customer storefront now uses a responsive violet/purple commerce visual system inspired by the supplied reference: compact search/navigation header, promotional hero, trust highlights, category tiles, product cards, and refreshed cart/product/detail/auth styling. Mobile layouts collapse to a compact header and two-column product cards. The administration portal has matching violet styling. This refresh is intended to change presentation while retaining existing routes and API logic.
+### Order Management
+- View and manage customer orders.
+- Track order statuses.
+- Access order information.
+- Dashboard-based order monitoring.
+
+### Store Administration
+- Dedicated administration portal.
+- Admin and staff account management.
+- Permission-based staff access.
+- Store content customization.
+- Homepage hero section editing.
+- Promotional banner management.
+- Theme and color customization.
+- Font customization.
+- Store contact information management.
+- Business analytics and dashboard statistics.
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend development |
+| Vite | Frontend build tool |
+| Node.js | Backend runtime |
+| Express.js | Backend framework |
+| MongoDB | Database |
+| Mongoose | Database modeling |
+| Bootstrap / CSS | Responsive UI and styling |
+| JavaScript | Application development |
+
+## Design & User Interface
+
+SkyNex features a modern violet and purple visual theme designed for an engaging shopping experience.
+
+- Responsive desktop and mobile layouts.
+- Modern navigation and search interface.
+- Attractive promotional hero section.
+- Organized product cards.
+- Category-based product browsing.
+- Consistent styling across the storefront and administration portal.
+
+## Project Goals
+
+- Provide a convenient online electronics shopping experience.
+- Simplify product and inventory management.
+- Improve order management workflows.
+- Offer flexible storefront customization.
+- Provide permission-based administrative access.
+- Deliver a responsive and user-friendly interface.
+
+## Project Information
+
+**Project Name:** SkyNex — The Tech Hub
+
+**Category:** E-commerce / Online Electronics Store
+
+**Architecture:** MERN Stack
+
+**Project Type:** Web Application
+
+**Development Status:** Development build
+
+## Live Website
+
+[Visit SkyNex — The Tech Hub](https://skynex-nine.vercel.app/)
+
+## Author
+
+**Mitesh Vasava**
+
+BCA Student | Aspiring Data Analyst & Web Developer
+
+---
+
+*SkyNex — Explore Technology. Shop Smarter.*
